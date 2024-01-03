@@ -35,7 +35,11 @@ require "connexion.php";
         <li class="nav-item">
           <a class="nav-link" href="liste-patients.php">Liste patients</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ajout-rendezvous.php">Ajout RDV</a>
+        </li>
         
+
        
         
         </ul>
@@ -48,11 +52,31 @@ require "connexion.php";
 </nav>
 
 
-<h1 class="d-flex justify-content-center">HOSPITAL ST STEPHANE</h1> 
+<h1 class="d-flex justify-content-center">Liste des patients :</h1> 
 
 <img src="" alt="" srcset="">
 
-<a class="btn btn-danger" href="profil-patient.php" role="button">Profil Patients</a>
+
+<?php
+
+
+$patient=$connexion->query("SELECT * FROM patients");
+$table =$patient->fetchAll(PDO::FETCH_ASSOC);
+
+foreach($table as $valeur)
+{ 
+  echo '<div class="card mb-3"></div>';
+  echo '<div class="card"></div>';
+  echo "<h5 class='card-title'>{$valeur['lastname']} {$valeur['firstname']}</h5>";
+  
+
+  echo '<a href="profil-patient.php?id=' . $valeur['id'] . '" class="btn btn-primary">Profil patient</a>';
+}
+
+?>
+
+
+
 
 </body>
 

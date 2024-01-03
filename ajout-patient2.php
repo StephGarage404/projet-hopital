@@ -1,6 +1,6 @@
 <?php
 
-require_once "connexion.php";
+require "connexion.php";
 
 if (!empty($_POST['firstname'])
 && !empty($_POST['name'])

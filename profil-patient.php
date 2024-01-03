@@ -35,7 +35,9 @@ require "connexion.php";
         <li class="nav-item">
           <a class="nav-link" href="liste-patients.php">Liste patients</a>
         </li>
-       
+        <li class="nav-item">
+          <a class="nav-link" href="profil-patient.php">Profil patients</a>
+        </li>
       
       
         </ul>
@@ -48,7 +50,35 @@ require "connexion.php";
 </nav>
 
 
-<h1 class="d-flex justify-content-center">HOSPITAL ST STEPHANE</h1> 
+<h1 class="d-flex justify-content-center">Profil Patient :</h1> 
+
+<?php
+
+
+
+$patient = $connexion->query("SELECT * FROM patients WHERE id='" . $_GET["id"] . "'");
+$table = $patient->fetch(PDO::FETCH_ASSOC);
+
+// Vérifiez si un patient a été trouvé
+if ($table) {
+    echo '<div class="card mb-3">';
+    echo '<div class="card-body">';
+    echo "<h5 class='card-title'>
+          {$table['lastname']}
+          {$table['firstname']}
+          {$table['birthdate']}
+          {$table['phone']}
+          {$table['mail']}
+          </h5>";
+    echo '</div>';
+    echo '</div>';
+} else {
+    echo 'Patient non trouvé.';
+}
+
+
+?>
+
 
 </body>
 

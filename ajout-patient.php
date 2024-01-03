@@ -34,6 +34,9 @@ require "connexion.php";
         <li class="nav-item">
           <a class="nav-link" href="liste-patients.php">Liste patients</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ajout-rendezvous.php">Ajout RDV</a>
+            </li>
         </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -44,7 +47,7 @@ require "connexion.php";
 </nav>
 
 
-<h1 class="d-flex justify-content-center">HOSPITAL ST STEPHANE</h1> 
+<h1 class="d-flex justify-content-center">AJOUT PATIENT</h1> 
 
     
 <form action="ajout-patient2.php" method="post">
@@ -87,6 +90,16 @@ require "connexion.php";
         <button type="submit">ENVOYER</button>
     </ul>
 </form>
+
+
+<div class="container text-center">
+  <div class="row align-items-start pb-8">
+    <div class="col">
+      
+    <img class="image2" src="/Exercice-PDO-2-master/img/pngegg.png" style="width: 600px;">
+      
+  </div> 
+
 
 </body>
 

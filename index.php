@@ -35,6 +35,9 @@ require "connexion.php";
             <li class="nav-item">
             <a class="nav-link" href="liste-patients.php">Liste patients</a>
             </li>
+            <li class="nav-item">
+          <a class="nav-link" href="ajout-rendezvous.php">Ajout RDV</a>
+            </li>
         </ul>
        
 
@@ -48,7 +51,18 @@ require "connexion.php";
 <br>
 <br>
 <br>
-<h1 class="d-flex justify-content-center">HOSPITAL ST STEPHANE</h1> 
+<h1 class="d-flex justify-content-center">Hôpital Numérique WebSanté</h1> 
+
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+      
+    <img class="image1" src="./Exercice-PDO-2-master/img/1.png" style="width: 600px;">
+      
+  </div> 
+
+      
+  
 
 </body>
 
